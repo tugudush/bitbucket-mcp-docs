@@ -84,6 +84,15 @@ claude mcp add --transport stdio \
   </TabItem>
 </Tabs>
 
+:::caution[Keep your API token out of version control]
+`.vscode/mcp.json` will contain your API token. Add `.vscode/` to your project's `.gitignore` to avoid committing it accidentally:
+
+```bash
+echo ".vscode/" >> .gitignore
+```
+
+:::
+
 ---
 
 ## Option B: Local Build (Development)
