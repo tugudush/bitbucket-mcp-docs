@@ -1,0 +1,70 @@
+---
+title: Bitbucket MCP Server
+description: A read-only Model Context Protocol (MCP) server that provides secure access to Bitbucket repositories, pull requests, issues, and more.
+template: splash
+hero:
+  tagline: Secure, read-only Bitbucket access for VS Code Copilot, Cursor, and Claude Code — 37 tools, zero destructive operations.
+  actions:
+    - text: Get Started
+      link: /getting-started/requirements/
+      icon: right-arrow
+    - text: Browse Tools
+      link: /tools/repository-management/
+      icon: open-book
+      variant: minimal
+    - text: GitHub
+      link: https://github.com/tugudush/bitbucket-mcp
+      icon: github
+      variant: minimal
+---
+
+import { Card, CardGrid, Badge } from "@astrojs/starlight/components";
+
+<CardGrid stagger>
+  <Card title="37 Tools" icon="puzzle">
+    Full coverage of Bitbucket Cloud API v2.0 across 8 categories —
+    repositories, pull requests, branches, commits, pipelines, issues, search,
+    and users.
+  </Card>
+  <Card title="Read-Only by Design" icon="shield">
+    No write, delete, or modify operations are possible at any level.
+    `makeRequest()` blocks all non-GET requests at runtime.
+  </Card>
+  <Card title="Flexible Output Formats" icon="document">
+    Every tool supports `text`, `json`, and `toon` (Token-Oriented Object
+    Notation) output. TOON reduces LLM token consumption by 30–60%.
+  </Card>
+  <Card title="JMESPath Filtering" icon="magnifier">
+    Apply JMESPath expressions to transform and filter response data on any of
+    the 37 tools before output format conversion.
+  </Card>
+  <Card title="Tested & Production Ready" icon="approve-check-circle">
+    168 unit tests across 12 suites with 92.2% statement coverage. 31 of 37
+    tools verified against real Bitbucket API endpoints.
+  </Card>
+  <Card title="Integrations" icon="laptop">
+    Works out-of-the-box with **VS Code GitHub Copilot**, **Cursor**, and
+    **Claude Code** via a simple JSON config snippet.
+  </Card>
+</CardGrid>
+
+## Quick Install
+
+```bash
+npm install -g @tugudush/bitbucket-mcp
+```
+
+Then add your MCP client config — see the [Configuration guide](/getting-started/configuration/) for VS Code, Cursor, and Claude Code snippets.
+
+## What's Inside
+
+| Category                                               | Tools                                                 |
+| ------------------------------------------------------ | ----------------------------------------------------- |
+| [Repository Management](/tools/repository-management/) | 8 tools — list workspaces, browse repos, read files   |
+| [Pull Requests](/tools/pull-requests/)                 | 10 tools — PRs, comments, threads, diffs, CI statuses |
+| [Branches & Commits](/tools/branches-and-commits/)     | 8 tools — branches, commits, tags, merge base         |
+| [Diff & Comparison](/tools/diff-and-comparison/)       | 2 tools — unified diffs between commits               |
+| [CI/CD Pipelines](/tools/pipelines/)                   | 4 tools — pipeline runs, steps, and logs              |
+| [Issues](/tools/issues/)                               | 2 tools — issue listing and details                   |
+| [Search & Discovery](/tools/search/)                   | 1 tool — advanced code search with language filtering |
+| [User Information](/tools/users/)                      | 2 tools — user and authenticated user info            |

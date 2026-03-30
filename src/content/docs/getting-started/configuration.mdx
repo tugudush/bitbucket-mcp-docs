@@ -1,0 +1,189 @@
+---
+title: Configuration
+description: Configure Bitbucket MCP Server in VS Code, Cursor, and Claude Code.
+sidebar:
+  order: 3
+---
+
+import { Tabs, TabItem } from "@astrojs/starlight/components";
+
+Configure your MCP client by adding the Bitbucket MCP server block with your credentials.
+
+## Option A: NPM Global Installation (Recommended)
+
+After running `npm install -g @tugudush/bitbucket-mcp`:
+
+<Tabs>
+  <TabItem label="VS Code (Copilot)">
+
+Add to `.vscode/mcp.json` in your project:
+
+```json
+{
+  "servers": {
+    "bitbucket-mcp": {
+      "type": "stdio",
+      "command": "bitbucket-mcp",
+      "env": {
+        "BITBUCKET_API_TOKEN": "your-token",
+        "BITBUCKET_EMAIL": "your@email.com"
+      }
+    }
+  }
+}
+```
+
+  </TabItem>
+  <TabItem label="Cursor">
+
+Add to `~/.cursor/mcp.json` (global) or `.cursor/mcp.json` (per project):
+
+```json
+{
+  "mcpServers": {
+    "bitbucket-mcp": {
+      "command": "bitbucket-mcp",
+      "env": {
+        "BITBUCKET_API_TOKEN": "your-token",
+        "BITBUCKET_EMAIL": "your@email.com"
+      }
+    }
+  }
+}
+```
+
+  </TabItem>
+  <TabItem label="Claude Code">
+
+**Using the CLI:**
+
+```bash
+claude mcp add --transport stdio \
+  --env BITBUCKET_API_TOKEN=your-token \
+  --env BITBUCKET_EMAIL=your@email.com \
+  bitbucket-mcp -- npx -y @tugudush/bitbucket-mcp
+```
+
+**Or add to `.mcp.json` (project scope):**
+
+```json
+{
+  "mcpServers": {
+    "bitbucket-mcp": {
+      "command": "npx",
+      "args": ["-y", "@tugudush/bitbucket-mcp"],
+      "env": {
+        "BITBUCKET_API_TOKEN": "your-token",
+        "BITBUCKET_EMAIL": "your@email.com"
+      }
+    }
+  }
+}
+```
+
+  </TabItem>
+</Tabs>
+
+---
+
+## Option B: Local Build (Development)
+
+If you [built from source](/getting-started/installation/#option-2-build-from-source), replace the command with `node` and point to your built file:
+
+<Tabs>
+  <TabItem label="VS Code (Copilot)">
+
+```json
+{
+  "servers": {
+    "bitbucket-mcp": {
+      "type": "stdio",
+      "command": "node",
+      "args": ["/path/to/bitbucket-mcp/build/index.js"],
+      "env": {
+        "BITBUCKET_API_TOKEN": "your-token",
+        "BITBUCKET_EMAIL": "your@email.com"
+      }
+    }
+  }
+}
+```
+
+  </TabItem>
+  <TabItem label="Cursor">
+
+```json
+{
+  "mcpServers": {
+    "bitbucket-mcp": {
+      "command": "node",
+      "args": ["/path/to/bitbucket-mcp/build/index.js"],
+      "env": {
+        "BITBUCKET_API_TOKEN": "your-token",
+        "BITBUCKET_EMAIL": "your@email.com"
+      }
+    }
+  }
+}
+```
+
+  </TabItem>
+  <TabItem label="Claude Code">
+
+**Using the CLI:**
+
+```bash
+claude mcp add --transport stdio \
+  --env BITBUCKET_API_TOKEN=your-token \
+  --env BITBUCKET_EMAIL=your@email.com \
+  bitbucket-mcp -- node /path/to/bitbucket-mcp/build/index.js
+```
+
+**Or add to `.mcp.json` (project scope):**
+
+```json
+{
+  "mcpServers": {
+    "bitbucket-mcp": {
+      "command": "node",
+      "args": ["/path/to/bitbucket-mcp/build/index.js"],
+      "env": {
+        "BITBUCKET_API_TOKEN": "your-token",
+        "BITBUCKET_EMAIL": "your@email.com"
+      }
+    }
+  }
+}
+```
+
+  </TabItem>
+</Tabs>
+
+:::note
+Replace `/path/to/bitbucket-mcp/build/index.js` with the **absolute path** to your built server file.
+:::
+
+---
+
+## Environment Variables
+
+| Variable                   | Required | Description                                                |
+| -------------------------- | -------- | ---------------------------------------------------------- |
+| `BITBUCKET_API_TOKEN`      | ✅ Yes   | Your Atlassian API token                                   |
+| `BITBUCKET_EMAIL`          | ✅ Yes   | Your Atlassian account email                               |
+| `BITBUCKET_DEFAULT_FORMAT` | No       | Default output format: `text` (default), `json`, or `toon` |
+| `BITBUCKET_DEBUG`          | No       | Set to `true` to enable verbose debug logging              |
+
+See the [Output Formats guide](/guides/output-formats/) for details on `BITBUCKET_DEFAULT_FORMAT`.
+
+---
+
+## Verifying the Setup
+
+Once configured, try prompting your AI assistant:
+
+```
+Using bitbucket, list all my accessible workspaces
+```
+
+If the server is connected, it will call `bb_list_workspaces` and return your workspace list.

@@ -1,0 +1,41 @@
+[     830ms] [WARNING] Multiple versions of FeatureGateClients found on the current page.
+      The currently bound version is 5.5.4 when module version 4.26.5 was loading. @ https://manage-profile-ui.prod-east.frontend.public.atl-paas.net/assets/index.ecf05d3e.js:82
+[     880ms] [WARNING] Deprecation warning: Moment Timezone has been loaded from a file containing data from 2012 to 2022 only. This file is out of date and may be removed in a future release. Dates and times for the current year might be incorrect. @ https://manage-profile-ui.prod-east.frontend.public.atl-paas.net/assets/index.ecf05d3e.js:158
+[    1076ms] [WARNING] Multiple versions of FeatureGateClients found on the current page.
+      The currently bound version is 5.5.4 when module version undefined was loading. @ https://manage-profile-ui.prod-east.frontend.public.atl-paas.net/assets/index.ecf05d3e.js:429
+[    1105ms] [ERROR] Failed to load resource: the server responded with a status of 401 () @ https://id.atlassian.com/gateway/api/me:0
+[    1178ms] [ERROR] Failed to load resource: the server responded with a status of 401 () @ https://id.atlassian.com/gateway/api/me:0
+[    1217ms] [ERROR] Error occurred when trying to fetch the Feature Gates client values, error: Failed to fetch @ https://manage-profile-ui.prod-east.frontend.public.atl-paas.net/assets/esm.648395e5.js:0
+[    1217ms] [WARNING] Initialising Statsig client without values @ https://manage-profile-ui.prod-east.frontend.public.atl-paas.net/assets/esm.648395e5.js:0
+[    1221ms] [ERROR]  ERROR  [Statsig] Failed to parse EvaluationResponse @ https://manage-profile-ui.prod-east.frontend.public.atl-paas.net/assets/esm.648395e5.js:0
+[    1222ms] [ERROR]  ERROR  [Statsig] Failed to parse EvaluationResponse @ https://manage-profile-ui.prod-east.frontend.public.atl-paas.net/assets/esm.648395e5.js:0
+[    1722ms] [WARNING] {msg: An error has occurred checking the feature gate. Only the first occurrence of this error is logged., gateName: platform_ufo_self_timings, error: Error: Client must be initialized before using this method
+    at e.value (https://id-frontend.prod…} @ https://id-frontend.prod-east.frontend.public.atl-paas.net/assets/index.7bc230b4.js:39
+[    1736ms] [WARNING] Multiple versions of FeatureGateClients found on the current page.
+      The currently bound version is 5.5.4 when module version 4.26.5 was loading. @ https://id-frontend.prod-east.frontend.public.atl-paas.net/assets/index.7bc230b4.js:39
+[    6983ms] [WARNING] [GSI_LOGGER]: Your client application uses one of the Google One Tap prompt UI status methods that may stop functioning when FedCM becomes mandatory. Refer to the migration guide to update your code accordingly and opt-in to FedCM to test your changes. Learn more: https://developers.google.com/identity/gsi/web/guides/fedcm-migration?s=dc#display_moment and https://developers.google.com/identity/gsi/web/guides/fedcm-migration?s=dc#skipped_moment @ https://id-frontend.prod-east.frontend.public.atl-paas.net/assets/index.7bc230b4.js:39
+[    6986ms] [ERROR] Not signed in with the identity provider. @ https://id.atlassian.com/login?continue=https%3A%2F%2Fid.atlassian.com%2Fmanage-profile%2Fsecurity%2Fapi-tokens:0
+[    7068ms] [ERROR] Framing 'https://www.recaptcha.net/' violates the following report-only Content Security Policy directive: "default-src 'self' *.atl-paas.net". The violation has been logged, but no further action has been taken. Note that 'frame-src' was not explicitly set, so 'default-src' is used as a fallback.
+ @ https://www.gstatic.com/:0
+[    7351ms] [ERROR] Framing 'https://www.recaptcha.net/' violates the following report-only Content Security Policy directive: "default-src 'self' *.atl-paas.net". The violation has been logged, but no further action has been taken. Note that 'frame-src' was not explicitly set, so 'default-src' is used as a fallback.
+ @ https://www.gstatic.com/:0
+[   23275ms] [ERROR] [GSI_LOGGER]: FedCM get() rejects with NetworkError: Error retrieving a token. @ https://id-frontend.prod-east.frontend.public.atl-paas.net/assets/index.7bc230b4.js:39
+[   78771ms] [WARNING] Multiple versions of FeatureGateClients found on the current page.
+      The currently bound version is 5.5.4 when module version 4.26.5 was loading. @ https://manage-profile-ui.prod-east.frontend.public.atl-paas.net/assets/index.ecf05d3e.js:82
+[   78816ms] [WARNING] Deprecation warning: Moment Timezone has been loaded from a file containing data from 2012 to 2022 only. This file is out of date and may be removed in a future release. Dates and times for the current year might be incorrect. @ https://manage-profile-ui.prod-east.frontend.public.atl-paas.net/assets/index.ecf05d3e.js:158
+[   78998ms] [WARNING] Multiple versions of FeatureGateClients found on the current page.
+      The currently bound version is 5.5.4 when module version undefined was loading. @ https://manage-profile-ui.prod-east.frontend.public.atl-paas.net/assets/index.ecf05d3e.js:429
+[   79857ms] [WARNING] WidthDetector will be deprecated, please use WidthObserver from @atlaskit/width-detector instead. @ https://manage-profile-ui.prod-east.frontend.public.atl-paas.net/assets/esm.648395e5.js:0
+[   79862ms] [WARNING] WidthDetector will be deprecated, please use WidthObserver from @atlaskit/width-detector instead. @ https://manage-profile-ui.prod-east.frontend.public.atl-paas.net/assets/esm.648395e5.js:0
+[   81376ms] [ERROR] Failed to load resource: the server responded with a status of 403 () @ https://id.atlassian.com/gateway/api/users/557058:5310d15a-8d8c-41db-96cd-2608e7783c81/manage/api-tokens:0
+[   81725ms] [WARNING] {msg: An error has occurred checking the feature gate. Only the first occurrence of this error is logged., gateName: platform_ufo_self_timings, error: Error: Client must be initialized before using this method
+    at e.value (https://id-frontend.prod…} @ https://id-frontend.prod-east.frontend.public.atl-paas.net/assets/index.7bc230b4.js:39
+[   81740ms] [WARNING] Multiple versions of FeatureGateClients found on the current page.
+      The currently bound version is 5.5.4 when module version 4.26.5 was loading. @ https://id-frontend.prod-east.frontend.public.atl-paas.net/assets/index.7bc230b4.js:39
+[  106481ms] [WARNING] Multiple versions of FeatureGateClients found on the current page.
+      The currently bound version is 5.5.4 when module version 4.26.5 was loading. @ https://manage-profile-ui.prod-east.frontend.public.atl-paas.net/assets/index.ecf05d3e.js:82
+[  106499ms] [WARNING] Deprecation warning: Moment Timezone has been loaded from a file containing data from 2012 to 2022 only. This file is out of date and may be removed in a future release. Dates and times for the current year might be incorrect. @ https://manage-profile-ui.prod-east.frontend.public.atl-paas.net/assets/index.ecf05d3e.js:158
+[  106555ms] [WARNING] Multiple versions of FeatureGateClients found on the current page.
+      The currently bound version is 5.5.4 when module version undefined was loading. @ https://manage-profile-ui.prod-east.frontend.public.atl-paas.net/assets/index.ecf05d3e.js:429
+[  107359ms] [WARNING] WidthDetector will be deprecated, please use WidthObserver from @atlaskit/width-detector instead. @ https://manage-profile-ui.prod-east.frontend.public.atl-paas.net/assets/esm.648395e5.js:0
+[  107361ms] [WARNING] WidthDetector will be deprecated, please use WidthObserver from @atlaskit/width-detector instead. @ https://manage-profile-ui.prod-east.frontend.public.atl-paas.net/assets/esm.648395e5.js:0
