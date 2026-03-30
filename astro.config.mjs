@@ -1,11 +1,30 @@
 // @ts-check
 import { defineConfig } from "astro/config";
 import starlight from "@astrojs/starlight";
+import partytown from "@astrojs/partytown";
 
 // https://astro.build/config
 export default defineConfig({
   integrations: [
     starlight({
+      head: [
+        {
+          tag: "script",
+          attrs: {
+            async: true,
+            src: "https://www.googletagmanager.com/gtag/js?id=G-RVK5F2LD04",
+            type: "text/partytown",
+          },
+        },
+        {
+          tag: "script",
+          attrs: { type: "text/partytown" },
+          content: `window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-RVK5F2LD04');`,
+        },
+      ],
       title: "Bitbucket MCP Server",
       description:
         "A read-only Model Context Protocol (MCP) server that provides secure access to Bitbucket repositories, pull requests, issues, and more.",
@@ -73,6 +92,11 @@ export default defineConfig({
           ],
         },
       ],
+    }),
+    partytown({
+      config: {
+        forward: ["dataLayer.push"],
+      },
     }),
   ],
 });
