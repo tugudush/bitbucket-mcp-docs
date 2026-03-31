@@ -34,6 +34,11 @@ export default defineConfig({
           label: "GitHub",
           href: "https://github.com/tugudush/bitbucket-mcp",
         },
+        {
+          icon: "npm",
+          label: "NPM",
+          href: "https://www.npmjs.com/package/@tugudush/bitbucket-mcp",
+        },
       ],
       sidebar: [
         {
