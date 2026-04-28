@@ -24,7 +24,7 @@ description: Security guarantees and known limitations of the Bitbucket MCP Serv
 | ⚠️  | **Code search requirement**        | `bb_search_code` requires code search to be manually enabled in Bitbucket account settings at [bitbucket.org/search](https://bitbucket.org/search) |
 | ⚠️  | **File size limits**               | Large files are handled with pagination — up to 10,000 lines per request via `bb_get_file_content`                                                 |
 | ⚠️  | **Bitbucket Cloud only**           | The server targets Bitbucket Cloud (bitbucket.org) API v2.0. Bitbucket Server (on-premises) is not supported.                                      |
-| ⚠️  | **6 tools not integration-tested** | 31 of 37 tools are verified against real API endpoints. The remaining 6 use the same patterns but rely on unit test coverage.                      |
+| ⚠️  | **7 tools not integration-tested** | 31 of 38 tools are verified against real API endpoints. The remaining 7 use the same patterns but rely on unit test coverage.                      |
 
 ## Credential Security
 

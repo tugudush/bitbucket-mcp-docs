@@ -3,7 +3,7 @@ title: API Coverage
 description: Full list of Bitbucket Cloud API v2.0 endpoints covered by the Bitbucket MCP Server.
 ---
 
-The server implements **37 tools** covering all major Bitbucket Cloud API v2.0 endpoints. All operations are **read-only**.
+The server implements **38 tools** covering all major Bitbucket Cloud API v2.0 endpoints. All operations are **read-only**.
 
 ## Endpoint Coverage by Category
 
@@ -32,18 +32,19 @@ The server implements **37 tools** covering all major Bitbucket Cloud API v2.0 e
 
 ### Pull Requests API
 
-| Tool                           | Endpoint                                                                            |
-| ------------------------------ | ----------------------------------------------------------------------------------- |
-| `bb_get_pull_requests`         | `GET /repositories/{workspace}/{repo_slug}/pullrequests`                            |
-| `bb_get_pull_request`          | `GET /repositories/{workspace}/{repo_slug}/pullrequests/{id}`                       |
-| `bb_get_pull_request_comments` | `GET /repositories/{workspace}/{repo_slug}/pullrequests/{id}/comments`              |
-| `bb_get_pull_request_comment`  | `GET /repositories/{workspace}/{repo_slug}/pullrequests/{id}/comments/{comment_id}` |
-| `bb_get_comment_thread`        | `GET /repositories/{workspace}/{repo_slug}/pullrequests/{id}/comments` (paginated)  |
-| `bb_get_pull_request_activity` | `GET /repositories/{workspace}/{repo_slug}/pullrequests/{id}/activity`              |
-| `bb_get_pull_request_diff`     | `GET /repositories/{workspace}/{repo_slug}/pullrequests/{id}/diff`                  |
-| `bb_get_pull_request_diffstat` | `GET /repositories/{workspace}/{repo_slug}/pullrequests/{id}/diffstat`              |
-| `bb_get_pr_commits`            | `GET /repositories/{workspace}/{repo_slug}/pullrequests/{id}/commits`               |
-| `bb_get_pr_statuses`           | `GET /repositories/{workspace}/{repo_slug}/pullrequests/{id}/statuses`              |
+| Tool                           | Endpoint                                                                                                                             |
+| ------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------ |
+| `bb_get_pull_requests`         | `GET /repositories/{workspace}/{repo_slug}/pullrequests`                                                                             |
+| `bb_get_pull_request`          | `GET /repositories/{workspace}/{repo_slug}/pullrequests/{id}`                                                                        |
+| `bb_get_pull_request_comments` | `GET /repositories/{workspace}/{repo_slug}/pullrequests/{id}/comments`                                                               |
+| `bb_get_pull_request_comment`  | `GET /repositories/{workspace}/{repo_slug}/pullrequests/{id}/comments/{comment_id}`                                                  |
+| `bb_get_comment_thread`        | `GET /repositories/{workspace}/{repo_slug}/pullrequests/{id}/comments` (paginated)                                                   |
+| `bb_get_pull_request_activity` | `GET /repositories/{workspace}/{repo_slug}/pullrequests/{id}/activity`                                                               |
+| `bb_get_pull_request_diff`     | `GET /repositories/{workspace}/{repo_slug}/pullrequests/{id}/diff`                                                                   |
+| `bb_get_pull_request_diffstat` | `GET /repositories/{workspace}/{repo_slug}/pullrequests/{id}/diffstat`                                                               |
+| `bb_get_pr_commits`            | `GET /repositories/{workspace}/{repo_slug}/pullrequests/{id}/commits`                                                                |
+| `bb_get_pr_statuses`           | `GET /repositories/{workspace}/{repo_slug}/pullrequests/{id}/statuses`                                                               |
+| `bb_get_context`               | `GET /repositories/{workspace}/{repo_slug}/pullrequests/{id}` (composite: also fetches diffstat, statuses, and comments in parallel) |
 
 ### Branches API
 
@@ -109,11 +110,11 @@ The server implements **37 tools** covering all major Bitbucket Cloud API v2.0 e
 | Category              | Tools  |
 | --------------------- | ------ |
 | Repository Management | 8      |
-| Pull Requests         | 10     |
+| Pull Requests         | 11     |
 | Branches & Commits    | 8      |
 | Diff & Comparison     | 2      |
 | CI/CD Pipelines       | 4      |
 | Issues                | 2      |
 | Search & Discovery    | 1      |
 | User Information      | 2      |
-| **Total**             | **37** |
+| **Total**             | **38** |

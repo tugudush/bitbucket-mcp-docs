@@ -3,7 +3,7 @@ title: Output Formats
 description: Control how Bitbucket MCP Server formats responses — text, JSON, or TOON (Token-Oriented Object Notation).
 ---
 
-All 37 tools support an optional `output_format` parameter that controls how responses are returned.
+All 38 tools support an optional `output_format` parameter that controls how responses are returned.
 
 ## Available Formats
 

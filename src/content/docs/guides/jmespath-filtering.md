@@ -1,9 +1,9 @@
 ---
 title: JMESPath Filtering
-description: Apply JMESPath expressions to transform and filter Bitbucket API response data on any of the 37 tools.
+description: Apply JMESPath expressions to transform and filter Bitbucket API response data on any of the 38 tools.
 ---
 
-All 37 tools support an optional `filter` parameter that accepts a [JMESPath](https://jmespath.org/) expression. Filtering is applied **before** format conversion, making it composable with any `output_format`.
+All 38 tools support an optional `filter` parameter that accepts a [JMESPath](https://jmespath.org/) expression. Filtering is applied **before** format conversion, making it composable with any `output_format`.
 
 ## How It Works
 

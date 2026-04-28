@@ -1,12 +1,10 @@
-# Starlight Starter Kit: Basics
+# Bitbucket MCP Documentation Site
 
 [![Built with Starlight](https://astro.badg.es/v2/built-with-starlight/tiny.svg)](https://starlight.astro.build)
 
-```
-npm create astro@latest -- --template starlight
-```
+This is the dedicated documentation site for [bitbucket-mcp](https://github.com/tugudush/bitbucket-mcp) — a Model Context Protocol (MCP) server that provides AI assistants with structured access to Bitbucket repositories, pull requests, pipelines, and more.
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+The docs cover installation, configuration, tool references, usage guides, and development resources for the `bitbucket-mcp` project.
 
 ## 🚀 Project Structure
 
@@ -44,6 +42,7 @@ All commands are run from the root of the project, from a terminal:
 | `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
 | `npm run astro -- --help` | Get help using the Astro CLI                     |
 
-## 👀 Want to learn more?
+## 🔗 Links
 
-Check out [Starlight’s docs](https://starlight.astro.build/), read [the Astro documentation](https://docs.astro.build), or jump into the [Astro Discord server](https://astro.build/chat).
+- [bitbucket-mcp on GitHub](https://github.com/tugudush/bitbucket-mcp) — the main project repository
+- [Starlight docs](https://starlight.astro.build/) — the documentation framework powering this site

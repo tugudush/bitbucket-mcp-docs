@@ -8,7 +8,7 @@ sidebar:
 **1 tool** for advanced code search across a Bitbucket workspace or repository.
 
 :::caution[Prerequisite]
-Code search must be enabled in your Bitbucket account settings before this tool will work. Enable it at [https://bitbucket.org/search](https://bitbucket.org/search). All other 36 tools work without this setting.
+Code search must be enabled in your Bitbucket account settings before this tool will work. Enable it at [https://bitbucket.org/search](https://bitbucket.org/search). All other 37 tools work without this setting.
 :::
 
 ---

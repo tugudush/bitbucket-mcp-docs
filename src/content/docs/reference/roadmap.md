@@ -9,22 +9,29 @@ All major milestones for v3.x are complete:
 
 |     | Item                                                                                                      |
 | --- | --------------------------------------------------------------------------------------------------------- |
-| ✅  | **37 comprehensive tools** — full coverage of major Bitbucket Cloud API v2.0 endpoints                    |
+| ✅  | **38 comprehensive tools** — full coverage of major Bitbucket Cloud API v2.0 endpoints                    |
 | ✅  | **Comment threads with nested replies** — `bb_get_comment_thread` with `fetchAllPages()` pagination       |
-| ✅  | **Comprehensive test suite** — 168 unit tests, 92.2% statement coverage, 31/37 integration tests verified |
+| ✅  | **Comprehensive test suite** — 184 unit tests, 95.5% statement coverage, 31/38 integration tests verified |
 | ✅  | **Modular handler architecture** — handler registry pattern across 8 domain modules                       |
 | ✅  | **TOON output format** — compact tabular format, 30–60% token savings for LLM consumption                 |
 | ✅  | **JSON output format** — pretty-printed structured data for programmatic use                              |
-| ✅  | **JMESPath filtering** — data transformation on all 37 tools via the `filter` parameter                   |
+| ✅  | **JMESPath filtering** — data transformation on all 38 tools via the `filter` parameter                   |
 | ✅  | **Server-side BBQL filtering** — repository search no longer limited to a single page                     |
 | ✅  | **Jest coverage tooling** — `jest --coverage` fully operational                                           |
 | ✅  | **Correct `bb_get_user` endpoint** — uses `GET /users/{selected_user}`                                    |
+
+## Recent Updates (v3.7.x — April 2026)
+
+- `bb_get_context` tool added — curated PR context bundle in a single call (metadata, diffstat, statuses, comments)
+- Supports three input modes: direct params, Bitbucket PR URL parsing, or branch name lookup
+- Two detail levels: `summary` (default) and `full`
+- Total: 38 tools, 184 tests across 12 suites (95.5% coverage)
 
 ## Recent Updates (v3.6.x — February 2026)
 
 - TOON output format added
 - JSON output format added
-- JMESPath filtering (`filter` parameter) added to all 37 tools
+- JMESPath filtering (`filter` parameter) added to all 38 tools
 - Comprehensive unit tests for all 8 handler modules (168 tests, 12 suites)
 - Jest coverage tooling fixed
 - Repository search upgraded to server-side BBQL filtering

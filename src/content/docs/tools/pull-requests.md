@@ -5,7 +5,7 @@ sidebar:
   order: 2
 ---
 
-**10 tools** for working with pull requests, including comments, activity, diffs, commit lists, and CI/CD build statuses.
+**11 tools** for working with pull requests, including comments, activity, diffs, commit lists, CI/CD build statuses, and a curated context bundle.
 
 ---
 
@@ -169,3 +169,32 @@ Get CI/CD build statuses for a pull request — shows pass/fail status for each 
 **Example prompt:**
 
 > "Get build statuses for PR #123"
+
+---
+
+## `bb_get_context`
+
+Get a curated bundle of PR context in a single call: PR metadata, diffstat summary, build/review status, and comment previews. Fetches all data in parallel. Accepts three input modes — direct params, a Bitbucket PR URL, or a branch name.
+
+| Parameter         | Required | Description                                                                                                                                  |
+| ----------------- | -------- | -------------------------------------------------------------------------------------------------------------------------------------------- |
+| `workspace`       | No\*     | Workspace slug (\*required if `url` is not provided)                                                                                         |
+| `repo_slug`       | No\*     | Repository slug (\*required if `url` is not provided)                                                                                        |
+| `pull_request_id` | No       | PR number. If omitted, `branch` must be provided.                                                                                            |
+| `branch`          | No       | Branch name to look up the open PR for. Ignored if `pull_request_id` is provided.                                                            |
+| `url`             | No       | Bitbucket PR URL (e.g. `https://bitbucket.org/workspace/repo/pull-requests/42`). Extracts `workspace`, `repo_slug`, and PR ID automatically. |
+| `detail_level`    | No       | `summary` (default) or `full`. Full adds PR description, per-file diffstat, and last 20 comments.                                            |
+
+**Input modes:**
+
+- **Mode 1 — Direct:** `workspace` + `repo_slug` + `pull_request_id`
+- **Mode 2 — URL:** `url` (workspace, repo, and PR ID extracted automatically)
+- **Mode 3 — Branch:** `workspace` + `repo_slug` + `branch` (finds the open PR for that branch)
+
+**Example prompts:**
+
+> "Get full context for PR #123 in myworkspace/myrepo"
+>
+> "Summarize this PR: https://bitbucket.org/myworkspace/myrepo/pull-requests/123"
+>
+> "What's the status of the feature/auth branch PR in myworkspace/myrepo?"

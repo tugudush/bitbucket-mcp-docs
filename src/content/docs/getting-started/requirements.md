@@ -61,7 +61,7 @@ The token is shown only once. Copy it immediately and store it securely.
 The `bb_search_code` tool requires code search to be enabled in your Bitbucket account settings.
 
 :::tip[Highly Recommended]
-**Enable code search** at [https://bitbucket.org/search](https://bitbucket.org/search) to unlock the full power of the Bitbucket MCP Server. While all other 36 tools work without it, code search is essential for:
+**Enable code search** at [https://bitbucket.org/search](https://bitbucket.org/search) to unlock the full power of the Bitbucket MCP Server. While all other 37 tools work without it, code search is essential for:
 
 - Finding functions, classes, and interfaces across your codebase
 - Locating TODO comments and technical debt
@@ -71,4 +71,4 @@ The `bb_search_code` tool requires code search to be enabled in your Bitbucket a
 
 Enable it at [https://bitbucket.org/search](https://bitbucket.org/search).
 
-Without this, all other 36 tools work normally — only `bb_search_code` is affected.
+Without this, all other 37 tools work normally — only `bb_search_code` is affected.
