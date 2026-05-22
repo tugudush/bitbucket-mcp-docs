@@ -51,6 +51,15 @@ Use this approach for local development or to run an unreleased version.
    npm install
    ```
 
+   :::note[Deprecation Warnings]
+   During `npm install`, three deprecation warnings may appear:
+   1. `inflight@1.0.6` — Memory leak warning
+   2. `glob@7.2.3` — Security vulnerabilities in old versions
+   3. `glob@10.5.0` — Security vulnerabilities in old versions
+
+   These warnings come from **transitive dependencies** in the Jest testing ecosystem. They cannot be resolved without breaking changes or waiting for upstream updates. Since they only affect dev dependencies, they pose **no risk to production code**.
+   :::
+
 3. **Build the TypeScript source**
 
    ```bash
