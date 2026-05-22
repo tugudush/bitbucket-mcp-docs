@@ -13,11 +13,15 @@ sidebar:
 
 Get a unified diff between two commits or refs — shows all changes as a standard patch format.
 
-| Parameter   | Required | Description                                                           |
-| ----------- | -------- | --------------------------------------------------------------------- |
-| `workspace` | ✅       | Workspace slug                                                        |
-| `repo_slug` | ✅       | Repository slug                                                       |
-| `spec`      | ✅       | Diff spec — two commit SHAs joined with `..` (e.g., `abc123..def456`) |
+| Parameter           | Required | Description                                                                    |
+| ------------------- | -------- | ------------------------------------------------------------------------------ |
+| `workspace`         | ✅       | Workspace slug                                                                 |
+| `repo_slug`         | ✅       | Repository slug                                                                |
+| `spec`              | ✅       | Single commit hash (diffs against parent) or `commit1..commit2`                |
+| `context`           | No       | Number of context lines around changes                                         |
+| `path`              | No       | Filter diff to a single file path                                              |
+| `ignore_whitespace` | No       | Ignore whitespace changes                                                      |
+| `topic`             | No       | When `true` with two-commit spec, produces a 3-dot diff (source vs merge-base) |
 
 **Example prompt:**
 
@@ -29,11 +33,14 @@ Get a unified diff between two commits or refs — shows all changes as a standa
 
 Get per-file change statistics between two commits — shows lines added/removed and the type of change for each file (added, modified, removed).
 
-| Parameter   | Required | Description                                                           |
-| ----------- | -------- | --------------------------------------------------------------------- |
-| `workspace` | ✅       | Workspace slug                                                        |
-| `repo_slug` | ✅       | Repository slug                                                       |
-| `spec`      | ✅       | Diff spec — two commit SHAs joined with `..` (e.g., `abc123..def456`) |
+| Parameter           | Required | Description                                                                    |
+| ------------------- | -------- | ------------------------------------------------------------------------------ |
+| `workspace`         | ✅       | Workspace slug                                                                 |
+| `repo_slug`         | ✅       | Repository slug                                                                |
+| `spec`              | ✅       | Single commit hash (diffs against parent) or `commit1..commit2`                |
+| `path`              | No       | Filter diffstat to a single file path                                          |
+| `ignore_whitespace` | No       | Ignore whitespace changes                                                      |
+| `topic`             | No       | When `true` with two-commit spec, produces a 3-dot diff (source vs merge-base) |
 
 **Example prompt:**
 

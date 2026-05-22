@@ -17,13 +17,15 @@ Code search must be enabled in your Bitbucket account settings before this tool 
 
 Search for code across a workspace or repository using Bitbucket's code search API. Supports language filtering and returns results with match highlighting.
 
-| Parameter   | Required | Description                                                           |
-| ----------- | -------- | --------------------------------------------------------------------- |
-| `workspace` | ✅       | Workspace slug                                                        |
-| `query`     | ✅       | Search query string                                                   |
-| `repo_slug` | No       | Limit search to a specific repository                                 |
-| `language`  | No       | Filter results by programming language (e.g., `python`, `typescript`) |
-| `page`      | No       | Page number                                                           |
+| Parameter      | Required | Description                                                           |
+| -------------- | -------- | --------------------------------------------------------------------- |
+| `workspace`    | ✅       | Workspace slug                                                        |
+| `search_query` | ✅       | Search query string                                                   |
+| `repo_slug`    | No       | Limit search to a specific repository                                 |
+| `language`     | No       | Filter results by programming language (e.g., `python`, `typescript`) |
+| `extension`    | No       | Filter results by file extension (e.g., `ts`, `py`)                   |
+| `page`         | No       | Page number                                                           |
+| `pagelen`      | No       | Results per page                                                      |
 
 **Example prompts:**
 
