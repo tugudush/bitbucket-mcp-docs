@@ -19,6 +19,7 @@ List all pull requests for a repository, with optional state filtering.
 | `repo_slug` | ✅       | Repository slug                                             |
 | `state`     | No       | Filter by state: `OPEN`, `MERGED`, `DECLINED`, `SUPERSEDED` |
 | `page`      | No       | Page number                                                 |
+| `pagelen`   | No       | Results per page                                            |
 
 **Example prompt:**
 
@@ -46,11 +47,13 @@ Get detailed information about a single pull request.
 
 List all comments on a pull request, including inline code comments and general comments.
 
-| Parameter         | Required | Description     |
-| ----------------- | -------- | --------------- |
-| `workspace`       | ✅       | Workspace slug  |
-| `repo_slug`       | ✅       | Repository slug |
-| `pull_request_id` | ✅       | PR number       |
+| Parameter         | Required | Description      |
+| ----------------- | -------- | ---------------- |
+| `workspace`       | ✅       | Workspace slug   |
+| `repo_slug`       | ✅       | Repository slug  |
+| `pull_request_id` | ✅       | PR number        |
+| `page`            | No       | Page number      |
+| `pagelen`         | No       | Results per page |
 
 **Example prompt:**
 
@@ -96,11 +99,13 @@ Get a full comment thread with all nested replies. Automatically fetches all pag
 
 Track the activity timeline of a pull request: reviews, approvals, comments, and state changes.
 
-| Parameter         | Required | Description     |
-| ----------------- | -------- | --------------- |
-| `workspace`       | ✅       | Workspace slug  |
-| `repo_slug`       | ✅       | Repository slug |
-| `pull_request_id` | ✅       | PR number       |
+| Parameter         | Required | Description      |
+| ----------------- | -------- | ---------------- |
+| `workspace`       | ✅       | Workspace slug   |
+| `repo_slug`       | ✅       | Repository slug  |
+| `pull_request_id` | ✅       | PR number        |
+| `page`            | No       | Page number      |
+| `pagelen`         | No       | Results per page |
 
 **Example prompt:**
 
@@ -112,11 +117,13 @@ Track the activity timeline of a pull request: reviews, approvals, comments, and
 
 Get the unified diff for a pull request — shows all file changes as a standard patch format.
 
-| Parameter         | Required | Description     |
-| ----------------- | -------- | --------------- |
-| `workspace`       | ✅       | Workspace slug  |
-| `repo_slug`       | ✅       | Repository slug |
-| `pull_request_id` | ✅       | PR number       |
+| Parameter         | Required | Description                            |
+| ----------------- | -------- | -------------------------------------- |
+| `workspace`       | ✅       | Workspace slug                         |
+| `repo_slug`       | ✅       | Repository slug                        |
+| `pull_request_id` | ✅       | PR number                              |
+| `context`         | No       | Number of context lines around changes |
+| `path`            | No       | Filter diff to a single file path      |
 
 **Example prompt:**
 
@@ -128,11 +135,12 @@ Get the unified diff for a pull request — shows all file changes as a standard
 
 Get per-file change statistics for a pull request (lines added/removed, files changed).
 
-| Parameter         | Required | Description     |
-| ----------------- | -------- | --------------- |
-| `workspace`       | ✅       | Workspace slug  |
-| `repo_slug`       | ✅       | Repository slug |
-| `pull_request_id` | ✅       | PR number       |
+| Parameter         | Required | Description                           |
+| ----------------- | -------- | ------------------------------------- |
+| `workspace`       | ✅       | Workspace slug                        |
+| `repo_slug`       | ✅       | Repository slug                       |
+| `pull_request_id` | ✅       | PR number                             |
+| `path`            | No       | Filter diffstat to a single file path |
 
 **Example prompt:**
 
@@ -144,11 +152,13 @@ Get per-file change statistics for a pull request (lines added/removed, files ch
 
 List all commits included in a pull request.
 
-| Parameter         | Required | Description     |
-| ----------------- | -------- | --------------- |
-| `workspace`       | ✅       | Workspace slug  |
-| `repo_slug`       | ✅       | Repository slug |
-| `pull_request_id` | ✅       | PR number       |
+| Parameter         | Required | Description      |
+| ----------------- | -------- | ---------------- |
+| `workspace`       | ✅       | Workspace slug   |
+| `repo_slug`       | ✅       | Repository slug  |
+| `pull_request_id` | ✅       | PR number        |
+| `page`            | No       | Page number      |
+| `pagelen`         | No       | Results per page |
 
 **Example prompt:**
 
@@ -160,11 +170,13 @@ List all commits included in a pull request.
 
 Get CI/CD build statuses for a pull request — shows pass/fail status for each build pipeline attached to the PR.
 
-| Parameter         | Required | Description     |
-| ----------------- | -------- | --------------- |
-| `workspace`       | ✅       | Workspace slug  |
-| `repo_slug`       | ✅       | Repository slug |
-| `pull_request_id` | ✅       | PR number       |
+| Parameter         | Required | Description      |
+| ----------------- | -------- | ---------------- |
+| `workspace`       | ✅       | Workspace slug   |
+| `repo_slug`       | ✅       | Repository slug  |
+| `pull_request_id` | ✅       | PR number        |
+| `page`            | No       | Page number      |
+| `pagelen`         | No       | Results per page |
 
 **Example prompt:**
 

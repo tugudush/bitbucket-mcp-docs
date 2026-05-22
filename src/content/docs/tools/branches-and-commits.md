@@ -13,11 +13,12 @@ sidebar:
 
 List all branches in a repository.
 
-| Parameter   | Required | Description     |
-| ----------- | -------- | --------------- |
-| `workspace` | ✅       | Workspace slug  |
-| `repo_slug` | ✅       | Repository slug |
-| `page`      | No       | Page number     |
+| Parameter   | Required | Description      |
+| ----------- | -------- | ---------------- |
+| `workspace` | ✅       | Workspace slug   |
+| `repo_slug` | ✅       | Repository slug  |
+| `page`      | No       | Page number      |
+| `pagelen`   | No       | Results per page |
 
 **Example prompt:**
 
@@ -33,7 +34,7 @@ Get detailed information about a specific branch, including its latest commit.
 | ----------- | -------- | --------------- |
 | `workspace` | ✅       | Workspace slug  |
 | `repo_slug` | ✅       | Repository slug |
-| `branch`    | ✅       | Branch name     |
+| `name`      | ✅       | Branch name     |
 
 **Example prompt:**
 
@@ -45,12 +46,13 @@ Get detailed information about a specific branch, including its latest commit.
 
 List the commit history for a repository or a specific branch.
 
-| Parameter   | Required | Description           |
-| ----------- | -------- | --------------------- |
-| `workspace` | ✅       | Workspace slug        |
-| `repo_slug` | ✅       | Repository slug       |
-| `branch`    | No       | Filter by branch name |
-| `page`      | No       | Page number           |
+| Parameter   | Required | Description                           |
+| ----------- | -------- | ------------------------------------- |
+| `workspace` | ✅       | Workspace slug                        |
+| `repo_slug` | ✅       | Repository slug                       |
+| `branch`    | No       | Branch name (defaults to main branch) |
+| `page`      | No       | Page number                           |
+| `pagelen`   | No       | Results per page                      |
 
 **Example prompt:**
 
@@ -66,7 +68,7 @@ Get detailed information about a specific commit by its SHA.
 | ----------- | -------- | -------------------------------- |
 | `workspace` | ✅       | Workspace slug                   |
 | `repo_slug` | ✅       | Repository slug                  |
-| `commit`    | ✅       | Commit SHA (full or abbreviated) |
+| `commit`    | ✅       | Commit hash, branch name, or tag |
 
 **Example prompt:**
 
@@ -78,11 +80,13 @@ Get detailed information about a specific commit by its SHA.
 
 Get CI/CD build statuses for a specific commit.
 
-| Parameter   | Required | Description     |
-| ----------- | -------- | --------------- |
-| `workspace` | ✅       | Workspace slug  |
-| `repo_slug` | ✅       | Repository slug |
-| `commit`    | ✅       | Commit SHA      |
+| Parameter   | Required | Description      |
+| ----------- | -------- | ---------------- |
+| `workspace` | ✅       | Workspace slug   |
+| `repo_slug` | ✅       | Repository slug  |
+| `commit`    | ✅       | Commit SHA       |
+| `page`      | No       | Page number      |
+| `pagelen`   | No       | Results per page |
 
 **Example prompt:**
 
@@ -94,11 +98,11 @@ Get CI/CD build statuses for a specific commit.
 
 Find the common ancestor (merge base) between two branches or commits. Useful for understanding divergence points.
 
-| Parameter   | Required | Description                     |
-| ----------- | -------- | ------------------------------- |
-| `workspace` | ✅       | Workspace slug                  |
-| `repo_slug` | ✅       | Repository slug                 |
-| `refs`      | ✅       | Two branch names or commit SHAs |
+| Parameter   | Required | Description                                                                |
+| ----------- | -------- | -------------------------------------------------------------------------- |
+| `workspace` | ✅       | Workspace slug                                                             |
+| `repo_slug` | ✅       | Repository slug                                                            |
+| `revspec`   | ✅       | Two commit hashes or branch names separated by `..` (e.g. `main..feature`) |
 
 **Example prompt:**
 
@@ -110,11 +114,12 @@ Find the common ancestor (merge base) between two branches or commits. Useful fo
 
 List all tags in a repository.
 
-| Parameter   | Required | Description     |
-| ----------- | -------- | --------------- |
-| `workspace` | ✅       | Workspace slug  |
-| `repo_slug` | ✅       | Repository slug |
-| `page`      | No       | Page number     |
+| Parameter   | Required | Description      |
+| ----------- | -------- | ---------------- |
+| `workspace` | ✅       | Workspace slug   |
+| `repo_slug` | ✅       | Repository slug  |
+| `page`      | No       | Page number      |
+| `pagelen`   | No       | Results per page |
 
 **Example prompt:**
 
@@ -130,7 +135,7 @@ Get detailed information about a specific tag.
 | ----------- | -------- | --------------- |
 | `workspace` | ✅       | Workspace slug  |
 | `repo_slug` | ✅       | Repository slug |
-| `tag`       | ✅       | Tag name        |
+| `name`      | ✅       | Tag name        |
 
 **Example prompt:**
 

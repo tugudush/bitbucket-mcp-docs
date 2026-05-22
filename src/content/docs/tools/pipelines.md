@@ -13,11 +13,12 @@ sidebar:
 
 List pipeline runs for a repository, with the most recent runs first.
 
-| Parameter   | Required | Description     |
-| ----------- | -------- | --------------- |
-| `workspace` | ✅       | Workspace slug  |
-| `repo_slug` | ✅       | Repository slug |
-| `page`      | No       | Page number     |
+| Parameter   | Required | Description      |
+| ----------- | -------- | ---------------- |
+| `workspace` | ✅       | Workspace slug   |
+| `repo_slug` | ✅       | Repository slug  |
+| `page`      | No       | Page number      |
+| `pagelen`   | No       | Results per page |
 
 **Example prompt:**
 
@@ -45,11 +46,13 @@ Get detailed information about a specific pipeline run, including its status, du
 
 List all steps (stages) within a pipeline run — shows each step's name, status, and duration.
 
-| Parameter       | Required | Description     |
-| --------------- | -------- | --------------- |
-| `workspace`     | ✅       | Workspace slug  |
-| `repo_slug`     | ✅       | Repository slug |
-| `pipeline_uuid` | ✅       | Pipeline UUID   |
+| Parameter       | Required | Description      |
+| --------------- | -------- | ---------------- |
+| `workspace`     | ✅       | Workspace slug   |
+| `repo_slug`     | ✅       | Repository slug  |
+| `pipeline_uuid` | ✅       | Pipeline UUID    |
+| `page`          | No       | Page number      |
+| `pagelen`       | No       | Results per page |
 
 **Example prompt:**
 

@@ -15,14 +15,16 @@ Bitbucket Issues must be enabled on the repository for these tools to return res
 
 ## `bb_get_issues`
 
-List all issues for a repository, with optional filtering by status.
+List all issues for a repository, with optional filtering by state or kind.
 
-| Parameter   | Required | Description                                                          |
-| ----------- | -------- | -------------------------------------------------------------------- |
-| `workspace` | ✅       | Workspace slug                                                       |
-| `repo_slug` | ✅       | Repository slug                                                      |
-| `status`    | No       | Filter: `new`, `open`, `resolved`, `wontfix`, `invalid`, `duplicate` |
-| `page`      | No       | Page number                                                          |
+| Parameter   | Required | Description                                                                                        |
+| ----------- | -------- | -------------------------------------------------------------------------------------------------- |
+| `workspace` | ✅       | Workspace slug                                                                                     |
+| `repo_slug` | ✅       | Repository slug                                                                                    |
+| `state`     | No       | Filter by state: `new`, `open`, `resolved`, `on hold`, `invalid`, `duplicate`, `wontfix`, `closed` |
+| `kind`      | No       | Filter by kind: `bug`, `enhancement`, `proposal`, `task`                                           |
+| `page`      | No       | Page number                                                                                        |
+| `pagelen`   | No       | Results per page                                                                                   |
 
 **Example prompt:**
 
