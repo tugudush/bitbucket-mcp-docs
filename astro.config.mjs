@@ -96,6 +96,13 @@ export default defineConfig({
             { label: "Roadmap", slug: "reference/roadmap" },
           ],
         },
+        {
+          label: "Support",
+          items: [
+            { label: "Funding", slug: "support/funding" },
+            { label: "Other Projects", slug: "support/other-projects" },
+          ],
+        },
       ],
     }),
     partytown({
